@@ -24,7 +24,7 @@ class SnmpSensor(Sensor):
                 if payload_result == "nginx":
                     payload_result_snmp =  {'servicestatus': 1}
         #############################################
-            self.sensor_service.dispatch(trigger='hello_st2.event1', payload=payload_result_snmp)
+            self.sensor_service.dispatch(trigger='snmpack.event1', payload=payload_result_snmp)
             eventlet.sleep(30)
 
     def cleanup(self):
